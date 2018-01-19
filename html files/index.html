@@ -1,0 +1,97 @@
+<?php
+session_start();
+?>
+
+<html>
+<head>
+	<title>Medicine store</title>
+
+	<style>
+	body{
+		color: white;
+		background-image: url("image1.jpg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+	     }
+	button{
+    			background-color: background-color: #e7e7e7;
+    			border: none;
+    			color: black;
+    			padding: 15px 32px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 16px;
+		}
+	</style>
+	<center><h1> TRANSACTION DETAILS</h1></center>
+</head>
+<body>
+<center>
+<br><br><br><br>
+	<form name="FIRST" method="POST" action="index1.php">
+	<font size="10">
+	<table>
+		<tr><td><label for="CUST_NAME">CUSTOMER NAME</label></td>
+		<td><input type="text" id="CUST_NAME" name="CUST_NAME" maxlength="20" size="30" required></td>
+		</tr>
+		<tr><td><label for="CUST_PHONE">CUSTOMER PHONE</label></td>
+		<td><input type="number" id="CUST_PHONE" name="CUST_PHONE" size="50" required></td>
+		</tr>
+
+    <script type='text/javascript' font-size:20px>
+        function addFields(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Medicine ID " + (i+1)));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "number";
+                input.id = i;
+								input.name="med"+i;
+								input.size = 20;
+								input.required = 1;
+                container.appendChild(input);
+                // Append a line break
+                container.appendChild(document.createElement("tr"));
+		}
+
+	for (j=0;j<number;j++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Quantity " + (j+1)));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "number";
+                input.name = "qty"+j;
+                container.appendChild(input);
+                // Append a line break
+                container.appendChild(document.createElement("br"));
+            }
+	container.appendChild(document.createElement("br"));
+        }
+    </script>
+
+    Number of medicines: (max. 10) <input type="text" id="member" name="member" value=""><br>
+    <h6><a href="#" id="Fill medicine DETAILS" onclick="addFields()">Add Medicine Details</a><h6><br>
+    <div id="container"/>
+
+	</table>
+		<br>
+
+		<button type="submit" value="add">PROCEED</button>
+
+
+	</font>
+	</form>
+
+</center>
+</body>
+</html>

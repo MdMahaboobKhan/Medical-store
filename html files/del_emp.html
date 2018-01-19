@@ -1,0 +1,51 @@
+<?php
+session_start();
+?>
+
+<html>
+<head>
+	<title>Medicine store</title>
+	
+	<style>
+	body{
+		color: white;
+		background-image: url("image1.jpg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		font-size: 20px;
+	     }
+	button{
+    			background-color: background-color: #e7e7e7; 
+    			border: none;
+    			color: black;
+    			padding: 15px 32px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 16px;
+		}
+	</style>
+	<center><h1> DELETE EMPLOYEE </h1></center>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br><br><br><br><br><br>
+	<form name="FIRST" method="POST" action="del_emp.php">
+	<font size="10">
+	<table>	
+		<tr><td><label for="M_ID">Please enter Employee ID</label></td>
+		<td><input type="text" id="M_ID" name="M_ID" maxlength="5" size="30" required></td>
+		</tr>
+	</table>
+		<br>
+		<br>
+		
+		<button type="submit" value="delete">Remove Employee</button>
+			
+			
+	</font>
+	</form>
+
+</center>
+</body>
+</html>

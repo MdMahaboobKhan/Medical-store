@@ -1,0 +1,58 @@
+<?php
+session_start();
+?>
+
+<html>
+<head>
+	<title>Medicine store</title>
+	
+	<style>
+	body{
+		color: white;
+		background-image: url("image1.jpg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		font-size: 20px
+	     }
+	button{
+    			background-color: background-color: #e7e7e7; 
+    			border: none;
+    			color: black;
+    			padding: 15px 32px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 16px;
+		}
+	</style>
+	<center><h1> Please enter a valid ID</h1></center>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br><br><br><br><br><br>
+	<form name="zero" method="POST" action="zero.php">
+	<font size="7">
+	<table font size="50"> 
+		<tr>
+		<td><label for="EMP_ID" >EMPLOYEE ID  </label></td>
+		<td><input type="text" id="EMP_ID" name="EMP_ID" maxlength="5" size="30" required></td>
+		</tr>
+	</table>	
+		<br>
+		<br>
+		<br>
+		<button type="submit" value="add">LOGIN</button>
+
+
+	</font>
+	</form>
+
+
+</center>
+</body>
+</html>
+
+<?php
+// Set session variables
+$_SESSION["teid"] = $_POST['EMP_ID'];
+?>
